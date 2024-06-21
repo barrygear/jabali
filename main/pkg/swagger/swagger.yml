@@ -36,6 +36,8 @@ paths:
   /games:
     get:
       description: List Games
+      summary: List Games
+      operationId: listGames         
       tags:
         - jabali
       produces:
@@ -53,6 +55,8 @@ paths:
   /game:
     post:
       summary: Create a new Game
+      description: Create a new Game
+      operationId: createGame         
       tags:
         - jabali
       consumes:
@@ -85,7 +89,9 @@ paths:
 
   /game/{gameId}:
     get:
+      summary: Get a Game
       description: Get a Game
+      operationId: getGame       
       tags:
         - jabali
       produces:
@@ -111,7 +117,9 @@ paths:
             Access-Control-Allow-Origin:
               type: string
     delete:
-      description: Delete a game by a given name
+      description: Delete a game by a given ID
+      summary: Delete a game
+      operationId: deleteGame      
       tags:
         - jabali
       parameters:
@@ -126,7 +134,9 @@ paths:
         404:
           description: A game with the specified ID was not found.
     put:
+      summary: Update a game
       description: Update a game
+      operationId: updateGame        
       tags:
         - jabali
       parameters:
