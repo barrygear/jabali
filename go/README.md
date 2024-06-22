@@ -13,11 +13,11 @@ To see how to make this your own, look here:
 [README](https://openapi-generator.tech)
 
 - API version: 0.0.1
-- Build date: 2024-06-21T18:27:16.535232-07:00[America/Los_Angeles]
+- Build date: 2024-06-21T19:09:03.159660-07:00[America/Los_Angeles]
 - Generator version: 7.6.0
 
-
 ### Running the server
+
 To run the server, follow these simple steps:
 
 ```
@@ -29,7 +29,13 @@ To run the server in a docker container
 docker build --network=host -t jabali_sdk .
 ```
 
-Once image is built use
+Once the image is built, just run
 ```
 docker run --rm -it jabali_sdk
 ```
+
+### Known Issue
+
+Endpoints sharing a common path may result in issues. For example, `/v2/pet/findByTags` and `/v2/pet/:petId` will result in an issue with the Gin framework. For more information about this known limitation, please refer to [gin-gonic/gin#388](https://github.com/gin-gonic/gin/issues/388) for more information.
+
+A workaround is to manually update the path and handler. Please refer to [gin-gonic/gin/issues/205#issuecomment-296155497](https://github.com/gin-gonic/gin/issues/205#issuecomment-296155497) for more information.

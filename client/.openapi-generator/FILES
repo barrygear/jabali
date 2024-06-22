@@ -1,0 +1,17 @@
+.gitignore
+.travis.yml
+README.md
+api/openapi.yaml
+api_jabali.go
+client.go
+configuration.go
+docs/CreateGameRequest.md
+docs/Game.md
+docs/JabaliAPI.md
+git_push.sh
+go.mod
+go.sum
+model_create_game_request.go
+model_game.go
+response.go
+utils.go
