@@ -1,4 +1,4 @@
-# Go API client for jabali_sdk
+# Go API client for jabaliSDK
 
 API Proposal for Jabali.
 
@@ -22,7 +22,7 @@ go get golang.org/x/net/context
 Put the package under your project folder and add the following in import:
 
 ```go
-import jabali_sdk "github.com/barrygear/jabali-sdk"
+import jabaliSDK "github.com/barrygear/jabali"
 ```
 
 To use a proxy, set the environment variable `HTTP_PROXY`:
@@ -37,18 +37,18 @@ Default configuration comes with `Servers` field that contains server objects as
 
 ### Select Server Configuration
 
-For using other server than the one defined on index 0 set context value `jabali_sdk.ContextServerIndex` of type `int`.
+For using other server than the one defined on index 0 set context value `jabaliSDK.ContextServerIndex` of type `int`.
 
 ```go
-ctx := context.WithValue(context.Background(), jabali_sdk.ContextServerIndex, 1)
+ctx := context.WithValue(context.Background(), jabaliSDK.ContextServerIndex, 1)
 ```
 
 ### Templated Server URL
 
-Templated server URL is formatted using default variables from configuration or from context value `jabali_sdk.ContextServerVariables` of type `map[string]string`.
+Templated server URL is formatted using default variables from configuration or from context value `jabaliSDK.ContextServerVariables` of type `map[string]string`.
 
 ```go
-ctx := context.WithValue(context.Background(), jabali_sdk.ContextServerVariables, map[string]string{
+ctx := context.WithValue(context.Background(), jabaliSDK.ContextServerVariables, map[string]string{
 	"basePath": "v2",
 })
 ```
@@ -59,13 +59,13 @@ Note, enum values are always validated and all unused variables are silently ign
 
 Each operation can use different server URL defined using `OperationServers` map in the `Configuration`.
 An operation is uniquely identified by `"{classname}Service.{nickname}"` string.
-Similar rules for overriding default operation server index and variables applies by using `jabali_sdk.ContextOperationServerIndices` and `jabali_sdk.ContextOperationServerVariables` context maps.
+Similar rules for overriding default operation server index and variables applies by using `jabaliSDK.ContextOperationServerIndices` and `jabaliSDK.ContextOperationServerVariables` context maps.
 
 ```go
-ctx := context.WithValue(context.Background(), jabali_sdk.ContextOperationServerIndices, map[string]int{
+ctx := context.WithValue(context.Background(), jabaliSDK.ContextOperationServerIndices, map[string]int{
 	"{classname}Service.{nickname}": 2,
 })
-ctx = context.WithValue(context.Background(), jabali_sdk.ContextOperationServerVariables, map[string]map[string]string{
+ctx = context.WithValue(context.Background(), jabaliSDK.ContextOperationServerVariables, map[string]map[string]string{
 	"{classname}Service.{nickname}": {
 		"port": "8443",
 	},
