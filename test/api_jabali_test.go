@@ -11,10 +11,11 @@ package jabali_sdk
 
 import (
 	"context"
+	"testing"
+
+	openapiclient "github.com/barrygear/jabali"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
-	openapiclient "github.com/barrygear/jabali"
 )
 
 func Test_jabali_sdk_JabaliAPIService(t *testing.T) {
@@ -24,7 +25,7 @@ func Test_jabali_sdk_JabaliAPIService(t *testing.T) {
 
 	t.Run("Test JabaliAPIService CheckHealth", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.JabaliAPI.CheckHealth(context.Background()).Execute()
 
@@ -36,7 +37,7 @@ func Test_jabali_sdk_JabaliAPIService(t *testing.T) {
 
 	t.Run("Test JabaliAPIService CreateGame", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.JabaliAPI.CreateGame(context.Background()).Execute()
 
@@ -48,7 +49,7 @@ func Test_jabali_sdk_JabaliAPIService(t *testing.T) {
 
 	t.Run("Test JabaliAPIService DeleteGame", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var gameId string
 
@@ -61,7 +62,7 @@ func Test_jabali_sdk_JabaliAPIService(t *testing.T) {
 
 	t.Run("Test JabaliAPIService GetGame", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var gameId string
 
@@ -75,7 +76,7 @@ func Test_jabali_sdk_JabaliAPIService(t *testing.T) {
 
 	t.Run("Test JabaliAPIService ListGames", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.JabaliAPI.ListGames(context.Background()).Execute()
 
@@ -87,7 +88,7 @@ func Test_jabali_sdk_JabaliAPIService(t *testing.T) {
 
 	t.Run("Test JabaliAPIService UpdateGame", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var gameId string
 

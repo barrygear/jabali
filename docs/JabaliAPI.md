@@ -30,7 +30,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/barrygear/jabali"
+	openapiclient "github.com/barrygear/jabali-sdk"
 )
 
 func main() {
@@ -91,7 +91,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/barrygear/jabali"
+	openapiclient "github.com/barrygear/jabali-sdk"
 )
 
 func main() {
@@ -157,7 +157,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/barrygear/jabali"
+	openapiclient "github.com/barrygear/jabali-sdk"
 )
 
 func main() {
@@ -225,7 +225,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/barrygear/jabali"
+	openapiclient "github.com/barrygear/jabali-sdk"
 )
 
 func main() {
@@ -295,7 +295,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/barrygear/jabali"
+	openapiclient "github.com/barrygear/jabali-sdk"
 )
 
 func main() {
@@ -356,7 +356,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/barrygear/jabali"
+	openapiclient "github.com/barrygear/jabali-sdk"
 )
 
 func main() {
